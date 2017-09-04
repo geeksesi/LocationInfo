@@ -2,32 +2,32 @@
 
 include "class/Country.php";
 
-Country::$data= array(
-   'iran' => array(
+Country::$data= [
+   'iran' => [
       'name'       => 'ایران',
       'phone_code' => '98',
       'language'   => 'fa',
       'localname'  => 'ir',
       'latitude'   => 146 ,
       'longitude'  => 467
-   ),
-   'usa' => array(
+    ] ,
+   'usa' => [
       'name'      =>  'ایالات متحده',
       'phone_code'=>  "1",
       'language'  =>  'en',
       'localname' =>  'usa',
       'latitude'  =>  123,
       'longitude' =>  852
-   ),
-   'ENG' => array(
+    ],
+   'ENG' => [
       'name'      =>  'انگلستان',
       'phone_code'=>  '55',
       'language'  =>  'en',
       'localname' =>  'en',
       'latitude'  =>  268 ,
       'longitude' =>  753
-   ),
-);
+    ]
+];
 
 echo "<h1>Country  </h1>";
 echo '<h4>
@@ -43,7 +43,7 @@ echo "</pre> ";
    $countryOne   = Country::get_phone_code('iran');
    $countryTwo   = Country::get_phone_code('ایران', 'name');
    $countryThree = Country::get("phone_code", "1", "all");
-   $countryFour  = Country::get("phone_code", "1", array("name", "longitude"));
+   $countryFour  = Country::get("phone_code", "1", ["name", "longitude"]);
    $countryFive  = Country::get("phone_code", "1", "name");
    $countrySix   = Country::get_coordinates('iran');
 

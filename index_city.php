@@ -1,28 +1,28 @@
 <?php
 include "class/City.php";
 
-City::$data = array(
-   'qom' => array(
+City::$data = [
+   'qom' => [
       'name'          =>  'قم',
       'phone_code'    =>  '025',
       'loc'           =>  'qom',
       'latitude'      =>  146 ,
       'longitude'     =>  467
-   ),
-   'tehran' => array(
+   ],
+   'tehran' => [
       'name'          =>  'تهران',
       'phone_code'    =>  '021',
       'latitude'      =>  123 ,
       'longitude'     =>  852
-   ),
-   'zanjan' => array(
+   ],
+   'zanjan' => [
       'name'          => 'زنجان',
       'phone_code'    => '051',
       'loc'           => 'زنجان',
       'latitude'      => 268 ,
       'longitude'     =>753
-   ),
-);
+   ],
+];
 
 
 echo "<h1>City</h1>";
@@ -41,7 +41,7 @@ echo "</pre> ";
    $cityOne   = City::get_phone_code('qom') ;
    $cityTwo   = City::get_phone_code("قم" , 'name') ;
    $cityThree = City::get("phone_code" , '025' , "all") ;
-   $cityFour  = City::get("phone_code" , "025" , array("name" , "longitude")) ;
+   $cityFour  = City::get("phone_code" , "025" , ["name" , "longitude"]) ;
    $cityFive  = City::get("phone_code" , "025" , "name") ;
    $citySix   = City::get_coordinates('qom');
       echo "<h4>use class like this method </h4>";
@@ -54,7 +54,7 @@ echo "</pre> ";
       echo "City::get(\"phone_code\" , '025' , \"all\") :";
       print_r( $cityThree ) ;
       echo "<br> \n ";
-      echo "City::get(\"phone_code\" , \"025\" , array(\"name\" , \"longitude\")):";
+      echo "City::get(\"phone_code\" , \"025\" , [\"name\" , \"longitude\")):";
       print_r( $cityFour ) ;
       echo "<br> \n ";
       echo "City::get(\"phone_code\" , \"025\" , \"name\"):";
