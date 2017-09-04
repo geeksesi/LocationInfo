@@ -1,7 +1,8 @@
 <?php
-include "class/Province.php";
+include "../DynamicClass/Province.php";
+$province = new Province();
 
-Province::$data = [
+$province->data = [
    'qom' => [
       'name'       =>  'قم',
       'phone_code' =>  '025',
@@ -30,39 +31,39 @@ echo '<h4>
       </h4>';
 
 echo '<h4>
-    Set Province::$data like this :
+    Set $province->data like this :
       </h4>';
 echo "<pre>";
-print_r(Province::$data);
+print_r($province->data);
 echo "</pre> ";
 
-   $provinceOne   = Province::get_phone_code('zanjan');
-   $provinceTwo   = Province::get_phone_code('زنجان', 'name');
-   $provinceThree = Province::get("phone_code", "051", "all");
-   $provinceFour  = Province::get("phone_code", "021", ["name", "longitude"]);
-   $provinceFive  = Province::get("phone_code", "051", "name");
-   $provinceSix   = Province::get_coordinates('zanjan');
+   $provinceOne   = $province->get_phone_code('zanjan');
+   $provinceTwo   = $province->get_phone_code('زنجان', 'name');
+   $provinceThree = $province->get("phone_code", "051", "all");
+   $provinceFour  = $province->get("phone_code", "021", ["name", "longitude"]);
+   $provinceFive  = $province->get("phone_code", "051", "name");
+   $provinceSix   = $province->get_coordinates('zanjan');
       echo "<h4>use class like this method </h4>";
-      echo "Province::get_phone_code('zanjan') :";
+      echo "$province->get_phone_code('zanjan') :";
       print_r( $provinceOne );
       echo "<br> \n ";
-      echo "Province::get_phone_code('زنجان', 'name'):";
+      echo "$province->get_phone_code('زنجان', 'name'):";
       print_r( $provinceTwo );
       echo "<br> \n ";
-      echo "Province::get(\"phone_code\", \"051\", \"all\")  :";
+      echo "$province->get(\"phone_code\", \"051\", \"all\")  :";
       print_r( $provinceThree );
       echo "<br> \n ";
-      echo "Province::get(\"phone_code\", \"021\", [\"name\", \"longitude\")):";
+      echo "$province->get(\"phone_code\", \"021\", [\"name\", \"longitude\")):";
       print_r( $provinceFour );
       echo "<br> \n ";
-      echo "Province::get(\"phone_code\", \"051\", \"name\"):";
+      echo "$province->get(\"phone_code\", \"051\", \"name\"):";
       print_r( $provinceFive );
       echo "<br> \n ";
-      echo "Province::get_coordinates('zanjan') : ";
+      echo "$province->get_coordinates('zanjan') : ";
       print_r( $provinceSix );
       echo "<br> \n ";
 
 ?>
-<h3 style="text-align: center"> please check <a href="city.php"> city </a> and <a
+<h3 style="text-align: center"> please check <a href="index_city.php"> city </a> and <a
       href="index.php"> Country
    </a> Sample </h3>

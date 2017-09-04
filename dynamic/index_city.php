@@ -1,7 +1,8 @@
 <?php
-include "class/City.php";
+include "../DynamicClass/City.php";
+$city = new City() ;
 
-City::$data = [
+$city->data = [
    'qom' => [
       'name'          =>  'قم',
       'phone_code'    =>  '025',
@@ -31,42 +32,43 @@ echo '<h4>
       </h4>';
 
 echo '<h4>
-    Set City::$data like this :
+    Set $city->data like this :
       </h4>';
 echo "<pre>";
-print_r(City::$data);
+print_r($city->data);
 echo "</pre> ";
 
    
-   $cityOne   = City::get_phone_code('qom') ;
-   $cityTwo   = City::get_phone_code("قم" , 'name') ;
-   $cityThree = City::get("phone_code" , '025' , "all") ;
-   $cityFour  = City::get("phone_code" , "025" , ["name" , "longitude"]) ;
-   $cityFive  = City::get("phone_code" , "025" , "name") ;
-   $citySix   = City::get_coordinates('qom');
+   $cityOne   = $city->get_phone_code('qom') ;
+   $cityTwo   = $city->get_phone_code("قم" , 'name') ;
+   $cityThree = $city->get("phone_code" , '025' , "all") ;
+   $cityFour  = $city->get("phone_code" , "025" , ["name" , "longitude"]) ;
+   $cityFive  = $city->get("phone_code" , "025" , "name") ;
+   $citySix   = $city->get_coordinates('qom');
       echo "<h4>use class like this method </h4>";
-      echo "City::get_phone_code('qom') :" ;
+      echo "$city->get_phone_code('qom') :" ;
       print_r( $cityOne ) ;
       echo "<br> \n ";
-      echo "City::get_phone_code(\"قم\" , 'name'):";
+      echo "$city->get_phone_code(\"قم\" , 'name'):";
       print_r( $cityTwo ) ;
       echo "<br> \n ";
-      echo "City::get(\"phone_code\" , '025' , \"all\") :";
+      echo "$city->get(\"phone_code\" , '025' , \"all\") :";
       print_r( $cityThree ) ;
       echo "<br> \n ";
-      echo "City::get(\"phone_code\" , \"025\" , [\"name\" , \"longitude\")):";
+      echo "$city->get(\"phone_code\" , \"025\" , [\"name\" , \"longitude\")):";
       print_r( $cityFour ) ;
       echo "<br> \n ";
-      echo "City::get(\"phone_code\" , \"025\" , \"name\"):";
+      echo "$city->get(\"phone_code\" , \"025\" , \"name\"):";
       print_r( $cityFive ) ;
       echo "<br> \n ";
-      echo "City::get_coordinates('qom') : ";
+      echo "$city->get_coordinates('qom') : ";
       print_r( $citySix ) ;
       echo "<br> \n ";
 
 
 ?>
 
-<h3 style="text-align: center">please check <a href="index.php"> Country </a> and <a href="province.php">
+<h3 style="text-align: center">please check <a href="index.php"> Country </a> and <a href="index_province
+.php">
       Province
    </a> Sample </h3>
