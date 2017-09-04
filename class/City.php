@@ -5,5 +5,4 @@ class City
     use Base ;
     
     static $data = array();
-   
 }

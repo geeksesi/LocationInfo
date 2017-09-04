@@ -71,6 +71,6 @@ echo "<br> \n ";
 
 ?>
 
-<h3 style="text-align: center">please check <a href="city.php"> city </a> and <a
+<h3 style="text-align: center ; font-style: oblique">please check <a href="city.php"> city </a> and <a
       href="province.php"> Province </a>
    Sample </h3>

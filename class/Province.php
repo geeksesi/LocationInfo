@@ -5,6 +5,5 @@ class Province
     use Base ;
     
    static $data = array();
-//
 
 }

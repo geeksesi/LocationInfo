@@ -1,7 +1,6 @@
 <?php
 trait Base
 {
-
     // @variable  $data is define in "Country , City Or Province" Class
 
     /**
