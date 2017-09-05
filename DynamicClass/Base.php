@@ -68,22 +68,22 @@ trait Base
      *
      * @return $export
      */
-    public function __call($name, $arguments = [] )
+    public function __call($_name, $_arguments = [] )
     {
 
-        $name = str_replace("get_","", $name);
+        $name = str_replace("get_","", $_name);
 
-        if ( !isset($arguments) )
+        if ( !isset($_arguments) )
         {
             return "hey please check arguments :) Thank you  ";
         }
         else
         {
             
-            if ( isset($arguments[0]) && isset($arguments[1]) )
+            if ( isset($_arguments[0]) && isset($_arguments[1]) )
             {
-                $value = $arguments[0];
-                $key = $arguments[1];
+                $value = $_arguments[0];
+                $key = $_arguments[1];
                 // need Country , City Or Province Name for export $name's value
                 // if $country return !== false => return  $this->data[$country][$name] else return error
                 $country = static::searchCountry($key , $value);
@@ -106,7 +106,7 @@ trait Base
                    /**
                     * @param ["string"] $count Country , City Or Province List
                     */
-                    if ( isset($arguments[0]) && $arguments[0] == $count && isset
+                    if ( isset($_arguments[0]) && $_arguments[0] == $count && isset
                     ($this->data[$count][$name]) )
                     {
                         $export = $this->data[$count][$name];
@@ -138,20 +138,20 @@ trait Base
      *
      * @return $result
      */
-    public function get($key, $value, $request)
+    public function get($_key, $_value, $_request)
     {
 
-        $_key = static::searchCountry($key, $value);
+        $_key = static::searchCountry($_key, $_value);
         if ($_key === FALSE)
         {
             return "Wrong , please check arguments ";
         }
         else {
             
-            if ( is_array($request) )
+            if ( is_array($_request) )
             {
                 $i = 0;
-                foreach ( $request as $keyItem => $keyValue )
+                foreach ( $_request as $keyItem => $keyValue )
                 {
                     if ( isset($this->data[$_key][$keyValue]) )
                     {
@@ -170,7 +170,7 @@ trait Base
 
             }
             
-            elseif ( $request == "all" )
+            elseif ( $_request == "all" )
             {
                 $i = 0;
                 foreach ( $this->data[$_key] as $keyItem => $valueResult )
@@ -184,12 +184,12 @@ trait Base
                     return $result;
                 }else
                 {
-                    return "Wrong, '$request' has problem . check please !" ;
+                    return "Wrong, '$_request' has problem . check please !" ;
                 }
 
             }
             else {
-                $result =  $this->data[$_key][$request];
+                $result =  $this->data[$_key][$_request];
                 if ( $result !== null )
                 {
                     return $result;
@@ -208,17 +208,17 @@ trait Base
      *
      * @return ["array"] latitude and longitude
      */
-    public function get_coordinates($name)
+    public function get_coordinates($_name)
     {
-        if ( !isset($this->data[$name]["latitude"]) && !isset($this->data[$name]["longitude"]) )
+        if ( !isset($this->data[$_name]["latitude"]) && !isset($this->data[$_name]["longitude"]) )
         {
             return  "Wrong , please check get_coordinates" ;
         }
         else
         {
             $return = array(
-                'latitude' => $this->data[$name]["latitude"] ,
-                'longitude' => $this->data[$name]["longitude"]
+                'latitude' => $this->data[$_name]["latitude"] ,
+                'longitude' => $this->data[$_name]["longitude"]
             );
             return $return ;
         }
