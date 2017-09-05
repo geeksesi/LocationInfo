@@ -3,24 +3,24 @@ include "../StaticClass/City.php";
 
 City::$data = [
    'qom' => [
-      'name'          =>  'قم',
-      'phone_code'    =>  '025',
-      'loc'           =>  'qom',
-      'latitude'      =>  146 ,
-      'longitude'     =>  467
+      'name'       =>  'قم',
+      'phone_code' =>  '025',
+      'loc'        =>  'qom',
+      'latitude'   =>  146 ,
+      'longitude'  =>  467
    ],
    'tehran' => [
-      'name'          =>  'تهران',
-      'phone_code'    =>  '021',
-      'latitude'      =>  123 ,
-      'longitude'     =>  852
+      'name'       =>  'تهران',
+      'phone_code' =>  '021',
+      'latitude'   =>  123 ,
+      'longitude'  =>  852
    ],
    'zanjan' => [
-      'name'          => 'زنجان',
-      'phone_code'    => '051',
-      'loc'           => 'زنجان',
-      'latitude'      => 268 ,
-      'longitude'     =>753
+      'name'       => 'زنجان',
+      'phone_code' => '051',
+      'loc'        => 'زنجان',
+      'latitude'   => 268 ,
+      'longitude'  =>753
    ],
 ];
 

@@ -1,29 +1,48 @@
 <?php
 include "../DynamicClass/Province.php";
 $province = new Province();
-
+$province2 = new Province();
+$province3 = new Province();
 $province->data = [
    'qom' => [
       'name'       =>  'قم',
       'phone_code' =>  '025',
-      'language'  =>  'fa',
+      'language'   =>  'fa',
       'latitude'   =>  146,
       'longitude'  =>  467
    ],
    'tehran' => [
       'name'       =>  'تهران',
       'phone_code' =>  '021',
-      'language'  =>  'fa',
+      'language'   =>  'fa',
       'latitude'   =>  123,
       'longitude'  =>  852
    ],
    'zanjan' => [
       'name'       =>  'زنجان',
       'phone_code' =>  '051',
-      'language'  =>  'fa',
+      'language'   =>  'fa',
       'loc'        =>  'زنجان',
       'latitude'   =>  268,
       'longitude'  =>  753
+   ],
+];
+$province2->data = [
+   'shiraz' => [
+      'name'      =>  'شیراز',
+      'phone_code'=>  '063',
+      'language'  =>  'fa',
+      'latitude'  =>  123,
+      'longitude' =>  852
+   ],
+];
+$province3->data = [
+   'mashhad' => [
+      'name'      =>  'مشهد',
+      'phone_code'=>  '097',
+      'language'  =>  'fa',
+      'latitude'  =>  123,
+      'longitude' =>  852
    ],
 ];
 
@@ -60,82 +79,64 @@ echo "</pre> ";
       print_r( $province_six );
       echo "<br> \n ";
 
-$province->data = [
-   'shiraz' => [
-      'name'      =>  'شیراز',
-      'phone_code'=>  '063',
-      'language'  =>  'fa',
-      'latitude'  =>  123,
-      'longitude' =>  852
-   ],
-];
+
 echo '<h3>New Array</h3>';
 echo "<pre>";
-print_r($province->data);
+print_r($province2->data);
 echo "</pre>";
 
-        $province_seven  = $province->get_coordinates('shiraz');
-        $province_eight  = $province->get_phone_code('shiraz');
-        $province_nine   = $province->get_phone_code('شیراز', 'name');
-        $province_ten    = $province->get('phone_code', '063', 'all');
-        $province_eleven = $province->get('phone_code', '063', ['name', 'longitude']);
-        $province_twelve = $province->get('phone_code', '063', 'language');
-            echo '$province->get_coordinates("shiraz"):';
+        $province_seven  = $province2->get_coordinates('shiraz');
+        $province_eight  = $province2->get_phone_code('shiraz');
+        $province_nine   = $province2->get_phone_code('شیراز', 'name');
+        $province_ten    = $province2->get('phone_code', '063', 'all');
+        $province_eleven = $province2->get('phone_code', '063', ['name', 'longitude']);
+        $province_twelve = $province2->get('phone_code', '063', 'language');
+            echo '$province2->get_coordinates("shiraz"):';
             print_r( $province_seven );
             echo '<br>';
-            echo '$province->get_phone_code("shiraz"):';
+            echo '$province2->get_phone_code("shiraz"):';
             print_r( $province_eight );
             echo '<br>';
-            echo '$province_nine   = $province->get_phone_code(\'شیراز\', \'name\'):';
+            echo '$province_nine   = $province2->get_phone_code(\'شیراز\', \'name\'):';
             print_r( $province_nine );
             echo '<br>';
-            echo '$province->get(\'phone_code\', \'063\', \'all\') :';
+            echo '$province2->get(\'phone_code\', \'063\', \'all\') :';
             print_r( $province_ten );
             echo '<br>';
-            echo '$province->get(\'phone_code\', \'063\', array(\'name\', \'longitude\')):';
+            echo '$province2->get(\'phone_code\', \'063\', array(\'name\', \'longitude\')):';
             print_r( $province_eleven );
             echo '<br>';
-            echo '$province->get(\'phone_code\', \'063\', \'language\'):';
+            echo '$province2->get(\'phone_code\', \'063\', \'language\'):';
             print_r( $province_twelve );
             echo '<br>';
-            
 
-$province->data = [
-   'mashhad' => [
-      'name'      =>  'مشهد',
-      'phone_code'=>  '097',
-      'language'  =>  'fa',
-      'latitude'  =>  123,
-      'longitude' =>  852
-   ],
-];
 echo '<h3>New Array</h3>';
 echo "<pre>";
-print_r($province->data);
+print_r($province3->data);
 echo "</pre>";
 
-    $province_thirteen  = $province->get_coordinates('mashhad');
-    $province_fourteen  = $province->get_phone_code('mashhad');
-    $province_fifteen   = $province->get_phone_code('مشهد', 'name');
-    $province_sixteen   = $province->get('phone_code', '097', 'all');
-    $province_seventeen = $province->get('phone_code', '097', ['name', 'longitude']);
-    $province_eighteen  = $province->get('phone_code', '097', 'language');
-        echo '$province->get_coordinates(\'mashhad\'):';
+    $province_thirteen  = $province3->get_coordinates('mashhad');
+    $province_fourteen  = $province3->get_phone_code('mashhad');
+    $province_fifteen   = $province3->get_phone_code('مشهد', 'name');
+    $province_sixteen   = $province3->get('phone_code', '097', 'all');
+    $province_seventeen = $province3->get('phone_code', '097', ['name', 'longitude']);
+    $province_eighteen  = $province3->get('phone_code', '097', 'language');
+        echo '$province3->get_coordinates(\'mashhad\'):';
         print_r( $province_thirteen );
         echo '<br>';
-        echo '$province->get_phone_code("mashhad"):';
+        echo '$province3->get_phone_code("mashhad"):';
         print_r( $province_fourteen );
         echo '<br>';
-        echo '$province->get_phone_code(\'مشهد\', \'name\') :';
+        echo '$province3->get_phone_code(\'مشهد\', \'name\') :';
         print_r( $province_fifteen );
         echo '<br>';
-        echo '$province->get(\'phone_code\', \'097\', \'all\') :';
+        echo '$province3->get(\'phone_code\', \'097\', \'all\') :';
         print_r( $province_sixteen );
         echo '<br>';
-        echo '$province->get(\'phone_code\', \'097\', array(\'name\', \'longitude\')):';
+        echo '$province3->get(\'phone_code\', \'097\', array(\'name\', \'longitude\')):';
         print_r( $province_seventeen );
         echo '<br>';
-        echo '$province->get(\'phone_code\', \'097\', \'language\'):';
+        echo '$province3->get(\'phone_code\', \'097\', \'language\'):';
         print_r( $province_eighteen );
         echo '<br>';
         

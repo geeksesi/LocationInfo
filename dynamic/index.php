@@ -2,7 +2,8 @@
 error_reporting(1);
 include '../DynamicClass/Country.php';
 $country = new Country();
-
+$country2 = new Country();
+$country3 = new Country();
 $country->data= [
    'iran' => [
       'name'       => 'ایران',
@@ -28,6 +29,27 @@ $country->data= [
       'latitude'  =>  268 ,
       'longitude' =>  753
     ]
+];
+
+$country2->data = [
+   'china' => [
+      'name'      =>  'چین',
+      'phone_code'=>  '90',
+      'language'  =>  'Hànyǔ',
+      'localname' =>  'China',
+      'latitude'  =>  123,
+      'longitude' =>  852
+   ],
+];
+$country3->data = [
+   'japan' => [
+      'name'      =>  'ژاپن',
+      'phone_code'=>  '55',
+      'language'  =>  'Japanese',
+      'localname' =>  'Japan',
+      'latitude'  =>  123,
+      'longitude' =>  852
+   ],
 ];
 
 echo '<h1>Country  </h1>';
@@ -62,82 +84,64 @@ echo '<h4> include Country Class in class/Country.php </h4>';
         echo '$country->get_coordinates("iran") : ';
         print_r( $country_six );
 
-$country->data = [
-   'china' => [
-      'name'      =>  'چین',
-      'phone_code'=>  '90',
-      'language'  =>  'Hànyǔ',
-      'localname' =>  'China',
-      'latitude'  =>  123,
-      'longitude' =>  852
-   ],
-];
+
 echo '<h3>New Array</h3>';
 echo "<pre>";
-print_r($country->data);
+print_r($country2->data);
 echo "</pre>";
 
-    $country_seven  = $country->get_coordinates('china');
-    $country_eight  = $country->get_phone_code('china');
-    $country_nine   = $country->get_phone_code('چین', 'name');
-    $country_ten    = $country->get('phone_code', '90', 'all');
-    $country_eleven = $country->get('phone_code', '90', ['name', 'longitude']);
-    $country_twelve = $country->get('phone_code', '90', 'language');
-        echo '$country->get_coordinates("china"):';
+    $country_seven  = $country2->get_coordinates('china');
+    $country_eight  = $country2->get_phone_code('china');
+    $country_nine   = $country2->get_phone_code('چین', 'name');
+    $country_ten    = $country2->get('phone_code', '90', 'all');
+    $country_eleven = $country2->get('phone_code', '90', ['name', 'longitude']);
+    $country_twelve = $country2->get('phone_code', '90', 'language');
+        echo '$country2->get_coordinates("china"):';
         print_r( $country_seven );
         echo '<br>';
-        echo '$country->get_phone_code("china"):';
+        echo '$country2->get_phone_code("china"):';
         print_r( $country_eight );
         echo '<br>';
-        echo '$country->get(\'phone_code\', \'90\', \'all\') :';
+        echo '$country2->get(\'phone_code\', \'90\', \'all\') :';
         print_r( $country_nine );
         echo '<br>';
-        echo '$country->get(\'phone_code\', \'90\', array(\'name\', \'longitude\')):';
+        echo '$country2->get(\'phone_code\', \'90\', array(\'name\', \'longitude\')):';
         print_r( $country_ten );
         echo '<br>';
-        echo '$country->get(\'phone_code\', \'90\', \'language\'):';
+        echo '$country2->get(\'phone_code\', \'90\', \'language\'):';
         print_r( $country_eleven );
         echo '<br>';
-        echo '$country->get_coordinates("iran") :';
+        echo '$country2->get_coordinates("iran") :';
         print_r( $country_twelve );
 
-$country->data = [
-   'japan' => [
-      'name'      =>  'ژاپن',
-      'phone_code'=>  '55',
-      'language'  =>  'Japanese',
-      'localname' =>  'Japan',
-      'latitude'  =>  123,
-      'longitude' =>  852
-   ],
-];
+
 echo '<h3>New Array</h3>';
 echo "<pre>";
-print_r($country->data);
+print_r($country3->data);
 echo "</pre>";
 
-    $country_thirteen  = $country->get_coordinates('japan');
-    $country_fourteen  = $country->get_phone_code('japan');
-    $country_fifteen   = $country->get_phone_code('ژاپن', 'name');
-    $country_sixteen   = $country->get('phone_code', '55', 'all');
-    $country_seventeen = $country->get('phone_code', '55', ['name', 'longitude']);
-    $country_eighteen  = $country->get('phone_code', '55', 'language');
-        echo '$country->get_coordinates(\'japan\'):';
+    $country_thirteen  = $country3->get_coordinates('japan');
+    $country_fourteen  = $country3->get_phone_code('japan');
+    $country_fifteen   = $country3->get_phone_code('ژاپن', 'name');
+    $country_sixteen   = $country3->get('phone_code', '55', 'all');
+    $country_seventeen = $country3->get('phone_code', '55', ['name', 'longitude']);
+    $country_eighteen  = $country3->get('phone_code', '55', 'language');
+        echo '$country3->get_coordinates(\'japan\'):';
         print_r( $country_thirteen );
         echo '<br>';
-        echo '$country->get_phone_code("japan"):';
+        echo '$country3->get_phone_code("japan"):';
         print_r( $country_fourteen );
         echo '<br>';
-        echo '$country->get(\'phone_code\', \'55\', \'all\') :';
+        echo '$country3->get(\'phone_code\', \'55\', \'all\') :';
         print_r( $country_fifteen );
         echo '<br>';
-        echo '$country->get(\'phone_code\', \'55\', array(\'name\', \'longitude\')):';
+        echo '$country3->get(\'phone_code\', \'55\', array(\'name\', \'longitude\')):';
         print_r( $country_sixteen );
         echo '<br>';
-        echo '$country->get(\'phone_code\', \'55\', \'language\'):';
+        echo '$country3->get(\'phone_code\', \'55\', \'language\'):';
         print_r( $country_seventeen );
         echo '<br>';
-        echo '$country->get_coordinates("china") :';
+        echo '$country3->get_coordinates("china") :';
         print_r( $country_eighteen );
         
 
