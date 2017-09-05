@@ -1,5 +1,5 @@
 <?php
-include '../DynamicClass/Province.php';
+include 'local_name/DynamicClass/Province.php';
 $province = new Province();
 $province2 = new Province();
 $province3 = new Province();
@@ -26,7 +26,7 @@ $province->data =
       'name'       =>  'zanjan',
       'phone_code' =>  '051',
       'language'   =>  'fa',
-      'localname'  =>  'زنجان',
+      'local_name'  =>  'زنجان',
       'latitude'   =>  268,
       'longitude'  =>  753
    ],

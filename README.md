@@ -3,27 +3,26 @@
 # Library
 <h3>static</h3> 
 <pre><code>
-
--Trait :
-------- StaticClass/Base.php
--Class : 
-------- StaticClass/Country
-------- StaticClass/City
-------- StaticClass/Province
--Sample : 
++Trait :
+-StaticClass/Base.php
++Class : 
+-StaticClass/Country
+-StaticClass/City
+-StaticClass/Province
++Sample : 
 -static/index.php :: Country
 -static/index_city.php :: City
 -static/index_province.php :: Province
 </code></pre>
 <h3>dynamic</h3>
 <pre><code>
--Trait :
-------- DynamicClass/Base.php
--Class : 
-------- DynamicClass/Country
-------- DynamicClass/City
-------- DynamicClass/Province
--Sample : 
++Trait :
+-DynamicClass/Base.php
++Class : 
+-DynamicClass/Country
+-DynamicClass/City
+-DynamicClass/Province
++Sample : 
 -dynamic/index.php :: Country
 -dynamic/index_city.php :: City
 -dynamic/index_province.php :: Province
@@ -48,63 +47,71 @@ include "StaticClass/Province.php";
 <h3>static</h3> 
 
 ```
-Country::$data= array(
-   'iran' => array(
+Country::$data=
+[
+   'iran' =>
+   [
       'name'       => 'iran',
       'phone_code' => '98',
       'language'   => 'fa',
       'localname'  => 'ir',
-      'latitude'   => 146 ,
+      'latitude'   => 146,
       'longitude'  => 467
-   ),
-   'usa' => array(
+    ] ,
+   'usa' =>
+   [
       'name'      =>  'usa',
-      'phone_code'=>  "1",
+      'phone_code'=>  '1',
       'language'  =>  'en',
       'localname' =>  'usa',
       'latitude'  =>  123,
       'longitude' =>  852
-   ),
-   'ENG' => array(
+    ],
+   'ENG' =>
+   [
       'name'      =>  'english',
       'phone_code'=>  '55',
       'language'  =>  'en',
       'localname' =>  'en',
-      'latitude'  =>  268 ,
+      'latitude'  =>  268,
       'longitude' =>  753
-   ),
-);
+    ]
+];
 ```
 
 <h3>dynamic</h3>
 
 ```
-$country->data= array(
-   'iran' => array(
+$country->data=
+   [
+   'iran' =>
+    [
       'name'       => 'iran',
       'phone_code' => '98',
       'language'   => 'fa',
       'localname'  => 'ir',
       'latitude'   => 146 ,
       'longitude'  => 467
-   ),
-   'usa' => array(
+    ] ,
+   'usa' =>
+     [
       'name'      =>  'usa',
-      'phone_code'=>  "1",
+      'phone_code'=>  '1',
       'language'  =>  'en',
       'localname' =>  'usa',
       'latitude'  =>  123,
       'longitude' =>  852
-   ),
-   'ENG' => array(
+    ],
+   'ENG' =>
+   [
       'name'      =>  'english',
       'phone_code'=>  '55',
       'language'  =>  'en',
       'localname' =>  'en',
       'latitude'  =>  268 ,
       'longitude' =>  753
-   ),
-);
+    ]
+];
 ```
 
 <h2> Use Static Function :</h2>
@@ -141,5 +148,3 @@ $country->data= array(
 
 `please check Sample File in static & dynamic Folder`
 
-# Licence 
-_what does it means ?_

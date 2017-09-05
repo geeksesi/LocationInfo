@@ -9,7 +9,7 @@ $city->data =
    [
       'name'       =>  'qom',
       'phone_code' =>  '025',
-      'localname'  =>  'قم',
+      'local_name'  =>  'قم',
       'latitude'   =>  146 ,
       'longitude'  =>  467
    ],
@@ -24,7 +24,7 @@ $city->data =
    [
       'name'       => 'zanjan',
       'phone_code' => '051',
-      'localname'  => 'زنجان',
+      'local_name'  => 'زنجان',
       'latitude'   => 268 ,
       'longitude'  =>753
    ],
