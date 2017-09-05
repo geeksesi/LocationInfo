@@ -5,24 +5,24 @@ Province::$data =
 [
    'qom' =>
    [
-      'name'       =>  'قم',
+      'name'       =>  'qom',
       'phone_code' =>  '025',
-      'loc'        =>  'qom',
+      'localname'        =>  'قم',
       'latitude'   =>  146,
       'longitude'  =>  467
    ],
    'tehran' =>
    [
-      'name'       =>  'تهران',
+      'name'       =>  'tehran',
       'phone_code' =>  '021',
       'latitude'   =>  123,
       'longitude'  =>  852
    ],
    'zanjan' =>
    [
-      'name'       =>  'زنجان',
+      'name'       =>  'zanjan',
       'phone_code' =>  '051',
-      'loc'        =>  'زنجان',
+      'localname'  =>  'زنجان',
       'latitude'   =>  268,
       'longitude'  =>  753
    ],
@@ -32,7 +32,7 @@ echo "<h1>Province</h1>";
 echo '<h4> include Province Class in class/Country.php</h4>';
 
 $province_one   = Province::get_phone_code('zanjan');
-$province_two   = Province::get_phone_code('زنجان', 'name');
+$province_two   = Province::get_phone_code('zanjan', 'name');
 $province_three = Province::get("phone_code", "051", "all");
 $province_four  = Province::get("phone_code", "021", ["name", "longitude"]);
 $province_five  = Province::get("phone_code", "051", "name");
@@ -45,7 +45,7 @@ echo "<h4>use class like this method </h4>";
 echo "Province::get_phone_code('zanjan') :";
 print_r( $province_one );
 echo "<br>";
-echo "Province::get_phone_code('زنجان', 'name'):";
+echo "Province::get_phone_code('zanjan', 'name'):";
 print_r( $province_two );
 echo "<br>";
 echo "Province::get(\"phone_code\", \"051\", \"all\")  :";

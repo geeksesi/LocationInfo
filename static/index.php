@@ -6,7 +6,7 @@ Country::$data=
 [
    'iran' =>
    [
-      'name'       => 'ایران',
+      'name'       => 'iran',
       'phone_code' => '98',
       'language'   => 'fa',
       'localname'  => 'ir',
@@ -15,7 +15,7 @@ Country::$data=
     ] ,
    'usa' =>
    [
-      'name'      =>  'ایالات متحده',
+      'name'      =>  'usa',
       'phone_code'=>  "1",
       'language'  =>  'en',
       'localname' =>  'usa',
@@ -24,7 +24,7 @@ Country::$data=
     ],
    'ENG' =>
    [
-      'name'      =>  'انگلستان',
+      'name'      =>  'english',
       'phone_code'=>  '55',
       'language'  =>  'en',
       'localname' =>  'en',
@@ -37,7 +37,7 @@ echo "<h1>Country:</h1>";
 echo '<h4>include Country Class in class/Country.php\</h4>';
 
 $country_one   = Country::get_phone_code('iran');
-$country_two   = Country::get_phone_code('ایران', 'name');
+$country_two   = Country::get_phone_code('iran', 'name');
 $country_three = Country::get("phone_code", "1", "all");
 $country_four  = Country::get("phone_code", "1", ["name", "longitude"]);
 $country_five  = Country::get("phone_code", "1", "name");
@@ -50,7 +50,7 @@ echo "<h4>use class like this method </h4>";
 echo "Country::get_phone_code('iran') :";
 print_r( $country_one );
 echo "<br>";
-echo "Country::get_phone_code('ایران', 'name'):";
+echo "Country::get_phone_code('iran', 'name'):";
 print_r( $country_two );
 echo "<br>";
 echo "Country::get(\"phone_code\", \"1\", \"all\") :";

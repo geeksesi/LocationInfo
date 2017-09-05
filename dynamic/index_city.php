@@ -7,24 +7,24 @@ $city->data =
 [
    'qom' =>
    [
-      'name'       =>  'قم',
+      'name'       =>  'qom',
       'phone_code' =>  '025',
-      'loc'        =>  'qom',
+      'localname'  =>  'قم',
       'latitude'   =>  146 ,
       'longitude'  =>  467
    ],
    'tehran' =>
    [
-      'name'       =>  'تهران',
+      'name'       =>  'tehran',
       'phone_code' =>  '021',
       'latitude'   =>  123 ,
       'longitude'  =>  852
    ],
    'zanjan' =>
    [
-      'name'       => 'زنجان',
+      'name'       => 'zanjan',
       'phone_code' => '051',
-      'loc'        => 'زنجان',
+      'localname'  => 'زنجان',
       'latitude'   => 268 ,
       'longitude'  =>753
    ],
@@ -33,7 +33,7 @@ $city2->data =
 [
    'shiraz' =>
    [
-      'name'      =>  'شیراز',
+      'name'      =>  'shiraz',
       'phone_code'=>  '063',
       'language'  =>  'fa',
       'latitude'  =>  123,
@@ -44,7 +44,7 @@ $city3->data =
 [
    'mashhad' =>
    [
-      'name'      =>  'مشهد',
+      'name'      =>  'mashhad',
       'phone_code'=>  '097',
       'language'  =>  'fa',
       'latitude'  =>  123,
@@ -60,7 +60,7 @@ print_r($city->data);
 echo "</pre> ";
 
 $city_one   = $city->get_phone_code('qom') ;
-$city_two   = $city->get_phone_code("قم" , 'name') ;
+$city_two   = $city->get_phone_code("qom" , 'name') ;
 $city_three = $city->get("phone_code" , '025' , "all") ;
 $city_four  = $city->get("phone_code" , "025" , ["name" , "longitude"]) ;
 $city_five  = $city->get("phone_code" , "025" , "name") ;
@@ -69,7 +69,7 @@ echo "<h4>use class like this method </h4>";
 echo "$city->get_phone_code('qom') :" ;
 print_r( $city_one ) ;
 echo "<br> \n ";
-echo "$city->get_phone_code(\"قم\" , 'name'):";
+echo "$city->get_phone_code(\"qom\" , 'name'):";
 print_r( $city_two ) ;
 echo "<br> \n ";
 echo "$city->get(\"phone_code\" , '025' , \"all\") :";
@@ -92,7 +92,7 @@ echo "</pre>";
 
 $city_seven  = $city2->get_coordinates('shiraz');
 $city_eight  = $city2->get_phone_code('shiraz');
-$city_nine   = $city2->get_phone_code('شیراز', 'name');
+$city_nine   = $city2->get_phone_code('shiraz', 'name');
 $city_ten    = $city2->get('phone_code', '063', 'all');
 $city_eleven = $city2->get('phone_code', '063', ['name', 'longitude']);
 $city_twelve = $city2->get('phone_code', '063', 'language');
@@ -102,7 +102,7 @@ echo '<br>';
 echo '$city2->get_phone_code("shiraz"):';
 print_r( $city_eight );
 echo '<br>';
-echo '$city_nine   = $city2->get_phone_code(\'شیراز\', \'name\'):';
+echo '$city_nine   = $city2->get_phone_code(\'shiraz\', \'name\'):';
 print_r( $city_nine );
 echo '<br>';
 echo '$city2->get(\'phone_code\', \'063\', \'all\') :';
@@ -122,7 +122,7 @@ echo "</pre>";
 
 $city_thirteen  = $city3->get_coordinates('mashhad');
 $city_fourteen  = $city3->get_phone_code('mashhad');
-$city_fifteen   = $city3->get_phone_code('مشهد', 'name');
+$city_fifteen   = $city3->get_phone_code('mashhad', 'name');
 $city_sixteen   = $city3->get('phone_code', '097', 'all');
 $city_seventeen = $city3->get('phone_code', '097', ['name', 'longitude']);
 $city_eighteen  = $city3->get('phone_code', '097', 'language');
