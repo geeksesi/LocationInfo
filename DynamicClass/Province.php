@@ -4,6 +4,6 @@ class Province
 {
     use Base ;
     
-   public $data = array();
+   public $data = [];
 
 }

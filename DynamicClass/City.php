@@ -4,5 +4,5 @@ class City
 {
     use Base ;
     
-    public $data = array();
+    public $data = [];
 }

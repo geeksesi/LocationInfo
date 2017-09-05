@@ -4,7 +4,7 @@ class Country
 {
     use Base ;
     
-   public $data = array();
+   public $data = [];
 }
 
 
