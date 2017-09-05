@@ -74,10 +74,10 @@ echo '<pre>';
 print_r($country->data);
 echo '</pre> ';
 echo '<h4>use class like this method </h4>';
-echo '$country->get_phone_code("iran") :';
+echo '$country->get_phone_code(\'iran\') :';
 print_r( $country_one );
 echo '<br>';
-echo '$country->get_phone_code("iran", "name"):';
+echo '$country->get_phone_code(\'iran\', \'name\'):';
 print_r( $country_two );
 echo '<br>';
 echo '$country->get(\'phone_code\', \'1\', \'all\') :';
@@ -89,14 +89,14 @@ echo '<br>';
 echo '$country->get(\'phone_code\', \'1\', \'name\'):';
 print_r( $country_five );
 echo '<br>';
-echo '$country->get_coordinates("iran") : ';
+echo '$country->get_coordinates(\'iran\') : ';
 print_r( $country_six );
 
 
 echo '<h3>New Array</h3>';
-echo "<pre>";
+echo '<pre>';
 print_r($country2->data);
-echo "</pre>";
+echo '</pre>';
 
 $country2_seven  = $country2->get_coordinates('china');
 $country2_eight  = $country2->get_phone_code('china');
@@ -104,10 +104,10 @@ $country2_nine   = $country2->get_phone_code('china', 'name');
 $country2_ten    = $country2->get('phone_code', '90', 'all');
 $country2_eleven = $country2->get('phone_code', '90', ['name', 'longitude']);
 $country2_twelve = $country2->get('phone_code', '90', 'language');
-echo '$country2->get_coordinates("china"):';
+echo '$country2->get_coordinates(\'china\'):';
 print_r( $country2_seven );
 echo '<br>';
-echo '$country2->get_phone_code("china"):';
+echo '$country2->get_phone_code(\'china\'):';
 print_r( $country2_eight );
 echo '<br>';
 echo '$country2->get(\'phone_code\', \'90\', \'all\') :';
@@ -119,13 +119,13 @@ echo '<br>';
 echo '$country2->get(\'phone_code\', \'90\', \'language\'):';
 print_r( $country2_eleven );
 echo '<br>';
-echo '$country2->get_coordinates("iran") :';
+echo '$country2->get_coordinates(\'iran\') :';
 print_r( $country2_twelve );
 
 echo '<h3>New Array</h3>';
-echo "<pre>";
+echo '<pre>';
 print_r($country3->data);
-echo "</pre>";
+echo '</pre>';
 
 $country3_thirteen  = $country3->get_coordinates('japan');
 $country3_fourteen  = $country3->get_phone_code('japan');
@@ -136,7 +136,7 @@ $country3_eighteen  = $country3->get('phone_code', '55', 'language');
 echo '$country3->get_coordinates(\'japan\'):';
 print_r( $country3_thirteen );
 echo '<br>';
-echo '$country3->get_phone_code("japan"):';
+echo '$country3->get_phone_code(\'japan\'):';
 print_r( $country3_fourteen );
 echo '<br>';
 echo '$country3->get(\'phone_code\', \'55\', \'all\') :';
@@ -148,11 +148,9 @@ echo '<br>';
 echo '$country3->get(\'phone_code\', \'55\', \'language\'):';
 print_r( $country3_seventeen );
 echo '<br>';
-echo '$country3->get_coordinates("china") :';
+echo '$country3->get_coordinates(\'china\') :';
 print_r( $country3_eighteen );
-
 ?>
 <br>
 <h3 style='text-align: center ; font-style: oblique'>please check <a href='index_city.php'> city </a> and <a
-  href='index_province.php'> Province </a>
-Sample </h3>
+href='index_province.php'> Province </a>Sample </h3>

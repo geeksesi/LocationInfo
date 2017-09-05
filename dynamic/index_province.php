@@ -1,5 +1,5 @@
 <?php
-include "../DynamicClass/Province.php";
+include '../DynamicClass/Province.php';
 $province = new Province();
 $province2 = new Province();
 $province3 = new Province();
@@ -54,43 +54,43 @@ $province3->data =
    ],
 ];
 
-echo "<h1>Province</h1>";
+echo '<h1>Province</h1>';
 echo '<h4>include Province Class in class/Country.php</h4>';
 echo '<h4>Set $province->data like this :</h4>';
-echo "<pre>";
+echo '<pre>';
 print_r($province->data);
-echo "</pre> ";
+echo '</pre> ';
 
 $province_one   = $province->get_phone_code('zanjan');
 $province_two   = $province->get_phone_code('zanjan', 'name');
-$province_three = $province->get("phone_code", "051", "all");
-$province_four  = $province->get("phone_code", "021", ["name", "longitude"]);
-$province_five  = $province->get("phone_code", "051", "name");
+$province_three = $province->get('phone_code', '051', 'all');
+$province_four  = $province->get('phone_code', '021', ['name', 'longitude']);
+$province_five  = $province->get('phone_code', '051', 'name');
 $province_six   = $province->get_coordinates('zanjan');
-echo "<h4>use class like this method </h4>";
-echo "$province->get_phone_code('zanjan') :";
+echo '<h4>use class like this method </h4>';
+echo '$province->get_phone_code(\'zanjan\') :';
 print_r( $province_one );
-echo "<br> \n ";
-echo "$province->get_phone_code('zanjan', 'name'):";
+echo '<br> \n ';
+echo '$province->get_phone_code(\'zanjan\', \'name\'):';
 print_r( $province_two );
-echo "<br> \n ";
-echo "$province->get(\"phone_code\", \"051\", \"all\")  :";
+echo '<br> \n ';
+echo '$province->get(\'phone_code\', \'051\', \'all\')  :';
 print_r( $province_three );
-echo "<br> \n ";
-echo "$province->get(\"phone_code\", \"021\", [\"name\", \"longitude\")):";
+echo '<br> \n ';
+echo '$province->get(\'phone_code\', \'021\', [\'name\', \'longitude\')):';
 print_r( $province_four );
-echo "<br> \n ";
-echo "$province->get(\"phone_code\", \"051\", \"name\"):";
+echo '<br> \n ';
+echo '$province->get(\'phone_code\', \'051\', \'name\'):';
 print_r( $province_five );
-echo "<br> \n ";
-echo "$province->get_coordinates('zanjan') : ";
+echo '<br> \n ';
+echo '$province->get_coordinates(\'zanjan\') : ';
 print_r( $province_six );
-echo "<br> \n ";
+echo '<br> \n ';
 
 echo '<h3>New Array</h3>';
-echo "<pre>";
+echo '<pre>';
 print_r($province2->data);
-echo "</pre>";
+echo '</pre>';
 
 $province_seven  = $province2->get_coordinates('shiraz');
 $province_eight  = $province2->get_phone_code('shiraz');
@@ -98,10 +98,10 @@ $province_nine   = $province2->get_phone_code('shiraz', 'name');
 $province_ten    = $province2->get('phone_code', '063', 'all');
 $province_eleven = $province2->get('phone_code', '063', ['name', 'longitude']);
 $province_twelve = $province2->get('phone_code', '063', 'language');
-echo '$province2->get_coordinates("shiraz"):';
+echo '$province2->get_coordinates(\'shiraz\'):';
 print_r( $province_seven );
 echo '<br>';
-echo '$province2->get_phone_code("shiraz"):';
+echo '$province2->get_phone_code(\'shiraz\'):';
 print_r( $province_eight );
 echo '<br>';
 echo '$province_nine   = $province2->get_phone_code(\'shiraz\', \'name\'):';
@@ -118,9 +118,9 @@ print_r( $province_twelve );
 echo '<br>';
 
 echo '<h3>New Array</h3>';
-echo "<pre>";
+echo '<pre>';
 print_r($province3->data);
-echo "</pre>";
+echo '</pre>';
 
 $province_thirteen  = $province3->get_coordinates('mashhad');
 $province_fourteen  = $province3->get_phone_code('mashhad');
@@ -131,7 +131,7 @@ $province_eighteen  = $province3->get('phone_code', '097', 'language');
 echo '$province3->get_coordinates(\'mashhad\'):';
 print_r( $province_thirteen );
 echo '<br>';
-echo '$province3->get_phone_code("mashhad"):';
+echo '$province3->get_phone_code(\'mashhad\'):';
 print_r( $province_fourteen );
 echo '<br>';
 echo '$province3->get_phone_code(\'mashhad\', \'name\') :';
@@ -146,8 +146,6 @@ echo '<br>';
 echo '$province3->get(\'phone_code\', \'097\', \'language\'):';
 print_r( $province_eighteen );
 echo '<br>';
-
 ?>
-<h3 style="text-align: center"> please check <a href="index_city.php"> city </a> and <a
-      href="index.php"> Country
-   </a> Sample </h3>
+<h3 style='text-align: center'> please check <a href='index_city.php'> city </a> and
+<a href='index.php'> Country</a> Sample </h3>

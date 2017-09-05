@@ -1,5 +1,5 @@
 <?php
-include "../DynamicClass/City.php";
+include '../DynamicClass/City.php';
 $city = new City() ;
 $city2 =new City();
 $city3 =new City();
@@ -52,43 +52,43 @@ $city3->data =
    ],
 ];
 
-echo "<h1>City</h1>";
+echo '<h1>City</h1>';
 echo '<h4>include City Class in class/Country.php</h4>';
 echo '<h4>Set $city->data like this :</h4>';
-echo "<pre>";
+echo '<pre>';
 print_r($city->data);
-echo "</pre> ";
+echo '</pre> ';
 
 $city_one   = $city->get_phone_code('qom') ;
-$city_two   = $city->get_phone_code("qom" , 'name') ;
-$city_three = $city->get("phone_code" , '025' , "all") ;
-$city_four  = $city->get("phone_code" , "025" , ["name" , "longitude"]) ;
-$city_five  = $city->get("phone_code" , "025" , "name") ;
+$city_two   = $city->get_phone_code('qom' , 'name') ;
+$city_three = $city->get('phone_code' , '025' , 'all') ;
+$city_four  = $city->get('phone_code' , '025' , ['name' , 'longitude']) ;
+$city_five  = $city->get('phone_code' , '025' , 'name') ;
 $city_six   = $city->get_coordinates('qom');
-echo "<h4>use class like this method </h4>";
-echo "$city->get_phone_code('qom') :" ;
+echo '<h4>use class like this method </h4>';
+echo '$city->get_phone_code(\'qom\') :' ;
 print_r( $city_one ) ;
-echo "<br> \n ";
-echo "$city->get_phone_code(\"qom\" , 'name'):";
+echo '<br> \n ';
+echo '$city->get_phone_code(\'qom\' , \'name\'):';
 print_r( $city_two ) ;
-echo "<br> \n ";
-echo "$city->get(\"phone_code\" , '025' , \"all\") :";
+echo '<br> \n ';
+echo '$city->get(\'phone_code\' , \'025\' , \'all\') :';
 print_r( $city_three ) ;
-echo "<br> \n ";
-echo "$city->get(\"phone_code\" , \"025\" , [\"name\" , \"longitude\")):";
+echo '<br> \n ';
+echo '$city->get(\'phone_code\' , \'025\' , [\'name\' , \'longitude\')):';
 print_r( $city_four ) ;
-echo "<br> \n ";
-echo "$city->get(\"phone_code\" , \"025\" , \"name\"):";
+echo '<br> \n ';
+echo '$city->get(\'phone_code\' , \'025\' , \'name\'):';
 print_r( $city_five ) ;
-echo "<br> \n ";
-echo "$city->get_coordinates('qom') : ";
+echo '<br> \n ';
+echo '$city->get_coordinates(\'qom\') : ';
 print_r( $city_six ) ;
-echo "<br> \n ";
+echo '<br> \n ';
 
 echo '<h3>New Array</h3>';
-echo "<pre>";
+echo '<pre>';
 print_r($city2->data);
-echo "</pre>";
+echo '</pre>';
 
 $city_seven  = $city2->get_coordinates('shiraz');
 $city_eight  = $city2->get_phone_code('shiraz');
@@ -96,10 +96,10 @@ $city_nine   = $city2->get_phone_code('shiraz', 'name');
 $city_ten    = $city2->get('phone_code', '063', 'all');
 $city_eleven = $city2->get('phone_code', '063', ['name', 'longitude']);
 $city_twelve = $city2->get('phone_code', '063', 'language');
-echo '$city2->get_coordinates("shiraz"):';
+echo '$city2->get_coordinates(\'shiraz\'):';
 print_r( $city_seven );
 echo '<br>';
-echo '$city2->get_phone_code("shiraz"):';
+echo '$city2->get_phone_code(\'shiraz\'):';
 print_r( $city_eight );
 echo '<br>';
 echo '$city_nine   = $city2->get_phone_code(\'shiraz\', \'name\'):';
@@ -116,9 +116,9 @@ print_r( $city_twelve );
 echo '<br>';
 
 echo '<h3>New Array</h3>';
-echo "<pre>";
+echo '<pre>';
 print_r($city3->data);
-echo "</pre>";
+echo '</pre>';
 
 $city_thirteen  = $city3->get_coordinates('mashhad');
 $city_fourteen  = $city3->get_phone_code('mashhad');
@@ -129,10 +129,10 @@ $city_eighteen  = $city3->get('phone_code', '097', 'language');
 echo '$city3->get_coordinates(\'mashhad\'):';
 print_r( $city_thirteen );
 echo '<br>';
-echo '$city3->get_phone_code("mashhad"):';
+echo '$city3->get_phone_code(\'mashhad\'):';
 print_r( $city_fourteen );
 echo '<br>';
-echo '$city3->get_phone_code(\'مشهد\', \'name\') :';
+echo '$city3->get_phone_code(\'mashhad\', \'name\') :';
 print_r( $city_fifteen );
 echo '<br>';
 echo '$city3->get(\'phone_code\', \'097\', \'all\') :';
@@ -144,10 +144,6 @@ echo '<br>';
 echo '$city3->get(\'phone_code\', \'097\', \'language\'):';
 print_r( $city_eighteen );
 echo '<br>';
-
 ?>
-
-<h3 style="text-align: center">please check <a href="index.php"> Country </a> and <a href="index_city
-.php">
-      Province
-   </a> Sample </h3>
+<h3 style='text-align: center'>please check <a href='index.php'> Country </a> and
+<a href='index_city.php'>Province</a> Sample </h3>
