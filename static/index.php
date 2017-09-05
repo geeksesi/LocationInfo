@@ -7,7 +7,7 @@ Country::$data=
       'name'       => 'iran',
       'phone_code' => '98',
       'language'   => 'fa',
-      'localname'  => 'ir',
+      'local_name'  => 'ir',
       'latitude'   => 146,
       'longitude'  => 467
     ] ,
@@ -16,7 +16,7 @@ Country::$data=
       'name'      =>  'usa',
       'phone_code'=>  '1',
       'language'  =>  'en',
-      'localname' =>  'usa',
+      'local_name' =>  'usa',
       'latitude'  =>  123,
       'longitude' =>  852
     ],
@@ -25,7 +25,7 @@ Country::$data=
       'name'      =>  'english',
       'phone_code'=>  '55',
       'language'  =>  'en',
-      'localname' =>  'en',
+      'local_name' =>  'en',
       'latitude'  =>  268,
       'longitude' =>  753
     ]

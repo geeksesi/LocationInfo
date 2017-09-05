@@ -54,7 +54,7 @@ Country::$data=
       'name'       => 'iran',
       'phone_code' => '98',
       'language'   => 'fa',
-      'localname'  => 'ir',
+      'local_name'  => 'ir',
       'latitude'   => 146,
       'longitude'  => 467
     ] ,
@@ -63,7 +63,7 @@ Country::$data=
       'name'      =>  'usa',
       'phone_code'=>  '1',
       'language'  =>  'en',
-      'localname' =>  'usa',
+      'local_name' =>  'usa',
       'latitude'  =>  123,
       'longitude' =>  852
     ],
@@ -72,7 +72,7 @@ Country::$data=
       'name'      =>  'english',
       'phone_code'=>  '55',
       'language'  =>  'en',
-      'localname' =>  'en',
+      'local_name' =>  'en',
       'latitude'  =>  268,
       'longitude' =>  753
     ]
@@ -89,7 +89,7 @@ $country->data=
       'name'       => 'iran',
       'phone_code' => '98',
       'language'   => 'fa',
-      'localname'  => 'ir',
+      'local_name'  => 'ir',
       'latitude'   => 146 ,
       'longitude'  => 467
     ] ,
@@ -98,7 +98,7 @@ $country->data=
       'name'      =>  'usa',
       'phone_code'=>  '1',
       'language'  =>  'en',
-      'localname' =>  'usa',
+      'local_name' =>  'usa',
       'latitude'  =>  123,
       'longitude' =>  852
     ],
@@ -107,7 +107,7 @@ $country->data=
       'name'      =>  'english',
       'phone_code'=>  '55',
       'language'  =>  'en',
-      'localname' =>  'en',
+      'local_name' =>  'en',
       'latitude'  =>  268 ,
       'longitude' =>  753
     ]
@@ -126,7 +126,7 @@ $country->data=
 <pre><code>
     Country::get_phone_code('iran');
     Country::get_name('1','phone_code');
-    Country::get('localname','usa',"phone_code");
+    Country::get('local_name','usa',"phone_code");
     Country::get_coordinates('ENG');
 </code></pre>
 <h3>dynamic</h3>
@@ -140,7 +140,7 @@ $country->data=
 <pre><code>
     $country->get_phone_code('iran');
     $country->get_name('1','phone_code');
-    $country->get('localname','usa',"phone_code");
+    $country->get('local_name','usa',"phone_code");
     $country->get_coordinates('ENG');
 </code></pre>
 
