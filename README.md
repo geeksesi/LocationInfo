@@ -50,7 +50,7 @@ include "StaticClass/Province.php";
 ```
 Country::$data= array(
    'iran' => array(
-      'name'       => 'ایران',
+      'name'       => 'iran',
       'phone_code' => '98',
       'language'   => 'fa',
       'localname'  => 'ir',
@@ -58,7 +58,7 @@ Country::$data= array(
       'longitude'  => 467
    ),
    'usa' => array(
-      'name'      =>  'ایالات متحده',
+      'name'      =>  'usa',
       'phone_code'=>  "1",
       'language'  =>  'en',
       'localname' =>  'usa',
@@ -66,7 +66,7 @@ Country::$data= array(
       'longitude' =>  852
    ),
    'ENG' => array(
-      'name'      =>  'انگلستان',
+      'name'      =>  'english',
       'phone_code'=>  '55',
       'language'  =>  'en',
       'localname' =>  'en',
@@ -81,7 +81,7 @@ Country::$data= array(
 ```
 $country->data= array(
    'iran' => array(
-      'name'       => 'ایران',
+      'name'       => 'iran',
       'phone_code' => '98',
       'language'   => 'fa',
       'localname'  => 'ir',
@@ -89,7 +89,7 @@ $country->data= array(
       'longitude'  => 467
    ),
    'usa' => array(
-      'name'      =>  'ایالات متحده',
+      'name'      =>  'usa',
       'phone_code'=>  "1",
       'language'  =>  'en',
       'localname' =>  'usa',
@@ -97,7 +97,7 @@ $country->data= array(
       'longitude' =>  852
    ),
    'ENG' => array(
-      'name'      =>  'انگلستان',
+      'name'      =>  'english',
       'phone_code'=>  '55',
       'language'  =>  'en',
       'localname' =>  'en',
@@ -117,8 +117,8 @@ $country->data= array(
 </code></pre>
 <h6> example :</h6>
 <pre><code>
-    Country::get_phone_code('iran'); //98
-    Country::get_name('1','phone_code'); //ایالات متحده
+    Country::get_phone_code('iran');
+    Country::get_name('1','phone_code');
     Country::get('localname','usa',"phone_code");
     Country::get_coordinates('ENG');
 </code></pre>
@@ -131,8 +131,8 @@ $country->data= array(
 </code></pre>
 <h6> example :</h6>
 <pre><code>
-    $country->get_phone_code('iran'); //98
-    $country->get_name('1','phone_code'); //ایالات متحده
+    $country->get_phone_code('iran');
+    $country->get_name('1','phone_code');
     $country->get('localname','usa',"phone_code");
     $country->get_coordinates('ENG');
 </code></pre>
