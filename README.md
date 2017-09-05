@@ -28,7 +28,9 @@
 -dynamic/index_city.php :: City
 -dynamic/index_province.php :: Province
 </code></pre>
+
 # HowToUse
+
 <h2>Include Classes :</h2>
 <h3>dynamic</h3>
 <pre><code>
@@ -73,7 +75,9 @@ Country::$data= array(
    ),
 );
 ```
+
 <h3>dynamic</h3>
+
 ```
 $country->data= array(
    'iran' => array(
@@ -102,6 +106,7 @@ $country->data= array(
    ),
 );
 ```
+
 <h2> Use Static Function :</h2>
 <h3>static</h3>
 <pre><code>
