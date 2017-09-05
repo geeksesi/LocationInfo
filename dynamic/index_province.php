@@ -6,19 +6,21 @@ $province->data = [
    'qom' => [
       'name'       =>  'قم',
       'phone_code' =>  '025',
-      'loc'        =>  'qom',
+      'language'  =>  'fa',
       'latitude'   =>  146,
       'longitude'  =>  467
    ],
    'tehran' => [
       'name'       =>  'تهران',
       'phone_code' =>  '021',
+      'language'  =>  'fa',
       'latitude'   =>  123,
       'longitude'  =>  852
    ],
    'zanjan' => [
       'name'       =>  'زنجان',
       'phone_code' =>  '051',
+      'language'  =>  'fa',
       'loc'        =>  'زنجان',
       'latitude'   =>  268,
       'longitude'  =>  753
@@ -26,42 +28,117 @@ $province->data = [
 ];
 
 echo "<h1>Province</h1>";
-echo '<h4>
-    include Province Class in class/Country.php
-      </h4>';
-
-echo '<h4>
-    Set $province->data like this :
-      </h4>';
+echo '<h4>include Province Class in class/Country.php</h4>';
+echo '<h4>Set $province->data like this :</h4>';
 echo "<pre>";
 print_r($province->data);
 echo "</pre> ";
 
-   $provinceOne   = $province->get_phone_code('zanjan');
-   $provinceTwo   = $province->get_phone_code('زنجان', 'name');
-   $provinceThree = $province->get("phone_code", "051", "all");
-   $provinceFour  = $province->get("phone_code", "021", ["name", "longitude"]);
-   $provinceFive  = $province->get("phone_code", "051", "name");
-   $provinceSix   = $province->get_coordinates('zanjan');
+   $province_one   = $province->get_phone_code('zanjan');
+   $province_two   = $province->get_phone_code('زنجان', 'name');
+   $province_three = $province->get("phone_code", "051", "all");
+   $province_four  = $province->get("phone_code", "021", ["name", "longitude"]);
+   $province_five  = $province->get("phone_code", "051", "name");
+   $province_six   = $province->get_coordinates('zanjan');
       echo "<h4>use class like this method </h4>";
       echo "$province->get_phone_code('zanjan') :";
-      print_r( $provinceOne );
+      print_r( $province_one );
       echo "<br> \n ";
       echo "$province->get_phone_code('زنجان', 'name'):";
-      print_r( $provinceTwo );
+      print_r( $province_two );
       echo "<br> \n ";
       echo "$province->get(\"phone_code\", \"051\", \"all\")  :";
-      print_r( $provinceThree );
+      print_r( $province_three );
       echo "<br> \n ";
       echo "$province->get(\"phone_code\", \"021\", [\"name\", \"longitude\")):";
-      print_r( $provinceFour );
+      print_r( $province_four );
       echo "<br> \n ";
       echo "$province->get(\"phone_code\", \"051\", \"name\"):";
-      print_r( $provinceFive );
+      print_r( $province_five );
       echo "<br> \n ";
       echo "$province->get_coordinates('zanjan') : ";
-      print_r( $provinceSix );
+      print_r( $province_six );
       echo "<br> \n ";
+
+$province->data = [
+   'shiraz' => [
+      'name'      =>  'شیراز',
+      'phone_code'=>  '063',
+      'language'  =>  'fa',
+      'latitude'  =>  123,
+      'longitude' =>  852
+   ],
+];
+echo '<h3>New Array</h3>';
+echo "<pre>";
+print_r($province->data);
+echo "</pre>";
+
+        $province_seven  = $province->get_coordinates('shiraz');
+        $province_eight  = $province->get_phone_code('shiraz');
+        $province_nine   = $province->get_phone_code('شیراز', 'name');
+        $province_ten    = $province->get('phone_code', '063', 'all');
+        $province_eleven = $province->get('phone_code', '063', ['name', 'longitude']);
+        $province_twelve = $province->get('phone_code', '063', 'language');
+            echo '$province->get_coordinates("shiraz"):';
+            print_r( $province_seven );
+            echo '<br>';
+            echo '$province->get_phone_code("shiraz"):';
+            print_r( $province_eight );
+            echo '<br>';
+            echo '$province_nine   = $province->get_phone_code(\'شیراز\', \'name\'):';
+            print_r( $province_nine );
+            echo '<br>';
+            echo '$province->get(\'phone_code\', \'063\', \'all\') :';
+            print_r( $province_ten );
+            echo '<br>';
+            echo '$province->get(\'phone_code\', \'063\', array(\'name\', \'longitude\')):';
+            print_r( $province_eleven );
+            echo '<br>';
+            echo '$province->get(\'phone_code\', \'063\', \'language\'):';
+            print_r( $province_twelve );
+            echo '<br>';
+            
+
+$province->data = [
+   'mashhad' => [
+      'name'      =>  'مشهد',
+      'phone_code'=>  '097',
+      'language'  =>  'fa',
+      'latitude'  =>  123,
+      'longitude' =>  852
+   ],
+];
+echo '<h3>New Array</h3>';
+echo "<pre>";
+print_r($province->data);
+echo "</pre>";
+
+    $province_thirteen  = $province->get_coordinates('mashhad');
+    $province_fourteen  = $province->get_phone_code('mashhad');
+    $province_fifteen   = $province->get_phone_code('مشهد', 'name');
+    $province_sixteen   = $province->get('phone_code', '097', 'all');
+    $province_seventeen = $province->get('phone_code', '097', ['name', 'longitude']);
+    $province_eighteen  = $province->get('phone_code', '097', 'language');
+        echo '$province->get_coordinates(\'mashhad\'):';
+        print_r( $province_thirteen );
+        echo '<br>';
+        echo '$province->get_phone_code("mashhad"):';
+        print_r( $province_fourteen );
+        echo '<br>';
+        echo '$province->get_phone_code(\'مشهد\', \'name\') :';
+        print_r( $province_fifteen );
+        echo '<br>';
+        echo '$province->get(\'phone_code\', \'097\', \'all\') :';
+        print_r( $province_sixteen );
+        echo '<br>';
+        echo '$province->get(\'phone_code\', \'097\', array(\'name\', \'longitude\')):';
+        print_r( $province_seventeen );
+        echo '<br>';
+        echo '$province->get(\'phone_code\', \'097\', \'language\'):';
+        print_r( $province_eighteen );
+        echo '<br>';
+        
 
 ?>
 <h3 style="text-align: center"> please check <a href="index_city.php"> city </a> and <a
